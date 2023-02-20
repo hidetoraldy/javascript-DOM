@@ -40,3 +40,9 @@ sBiru.addEventListener('input', function(){
     document.body.style.backgroundColor = 'rgb(' + red + ','  + green + ',' + blue +')';
 })
 
+document.body.addEventListener('mousemove', function(event){
+    const posX = Math.round((event.clientX / window.innerWidth)* 255);
+    const posY = Math.round((event.clientY / window.innerWidth)* 255);
+
+    document.body.style.backgroundColor = 'rgb('+ posX +','+ posY +',100)';
+})
